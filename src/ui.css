@@ -1,0 +1,97 @@
+
+ul,li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 12px;
+  margin: 0;
+}
+section {
+  padding: 8px 16px;
+  margin: 0;
+}
+
+button {
+  border-radius: 5px;
+  background: white;
+  color: black;
+  border: none;
+  padding: 8px 15px;
+  margin: 0 5px;
+  box-shadow: inset 0 0 0 1px black;
+  outline: none;
+}
+input {
+  border: none;
+  outline: none;
+  padding: 8px;
+}
+
+.search-area {
+  border-bottom: 1px solid #ddd;
+}
+.input-control {
+  display: flex;
+  position: relative;
+}
+
+.input-control:hover {
+  border-color: #aaa;
+}
+.icon-area {
+  width: 24px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.search-icon {
+  width: 16px;
+  padding: 4px;
+}
+input#search {
+  width: 100%;
+  padding-left: 32px;
+  padding-right: 8px;
+  box-sizing: border-box;
+  height: 24px;
+}
+.brand-list {
+  max-height: 400px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.brand-list::-webkit-scrollbar {
+    width: 3px;
+    border-radius: 2px;
+}
+
+.brand-list::-webkit-scrollbar * {
+    background: #f2f2f2 !important;
+    border-radius: 10px;
+}
+
+.brand-list::-webkit-scrollbar-thumb {
+    background: #f2f2f2 !important;
+    border-radius: 10px;
+}
+
+.brand-list > ul > li {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.brand-colors > li {
+  display: inline-block;
+}
+.colorball {
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    display: inline-block;
+    margin-right: 4px;
+}
