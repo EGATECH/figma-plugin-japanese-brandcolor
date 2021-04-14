@@ -8,6 +8,7 @@ body {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 12px;
   margin: 0;
+  overflow: hidden;
 }
 section {
   padding: 8px 16px;
@@ -60,26 +61,37 @@ input#search {
   height: 24px;
 }
 .brand-list {
-  max-height: 400px;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  height: calc( 100vh - 50px );
+  overflow: auto;
 }
 
 .brand-list::-webkit-scrollbar {
-    width: 3px;
-    border-radius: 2px;
+  overflow:hidden;
+  width:14px;
+  height:14px;
+  background:#fafafa;
 }
-
-.brand-list::-webkit-scrollbar * {
-    background: #f2f2f2 !important;
-    border-radius: 10px;
+.brand-list::-webkit-scrollbar-button {
+  display:none;
 }
-
-.brand-list::-webkit-scrollbar-thumb {
-    background: #f2f2f2 !important;
-    border-radius: 10px;
+.brand-list::-webkit-scrollbar-piece
+{
+  background:#eee;
 }
-
+.brand-list::-webkit-scrollbar-piece:start
+{
+  background:#eee;
+}
+.brand-list::-webkit-scrollbar-thumb
+{
+  overflow:hidden;
+  border-radius:3px;
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  -webkit-border-radius: 6px;
+  background-color: rgba(80, 80, 80, 0.15);
+  -webkit-box-shadow: inset -1px -1px 0px rgba(80, 80, 80, 0.05), inset 1px 1px 0px rgba(80, 80, 80, 0.05);
+}
 .brand-list > ul > li {
   padding-top: 2px;
   padding-bottom: 2px;
@@ -89,9 +101,13 @@ input#search {
   display: inline-block;
 }
 .colorball {
-    width: 24px;
-    height: 24px;
-    border-radius: 24px;
-    display: inline-block;
-    margin-right: 4px;
+  width: 24px;
+  height: 24px;
+  border-radius: 24px;
+  display: inline-block;
+  margin-right: 4px;
+  box-sizing: border-box;
+}
+.colorball:hover {
+  border: 1px solid #aaa;
 }
