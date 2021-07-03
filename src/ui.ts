@@ -15,8 +15,9 @@ const app = new Vue({
       if (!this.keyword) {
         return this.allBrandcolors;
       }
+      const lcaseKeyword = this.keyword.toLowerCase();
       return this.allBrandcolors.filter(brandcolor => {
-        if (brandcolor.name.indexOf(this.keyword) >= 0 || brandcolor.url.indexOf(this.keyword) >= 0) {
+        if (brandcolor.name.toLowerCase().indexOf(lcaseKeyword) >= 0 || brandcolor.url.indexOf(lcaseKeyword) >= 0) {
           return true;
         } else {
           return false;

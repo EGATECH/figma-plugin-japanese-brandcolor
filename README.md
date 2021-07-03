@@ -10,5 +10,5 @@
 
 
 ## Changelog
-
+0.1.1 Ignore case search
 0.1 Initial Release
