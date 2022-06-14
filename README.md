@@ -13,6 +13,9 @@
 
 
 ## Changelog
+0.1.2
+- Cache refresh improvement
+
 0.1.1
 - Ignore case search
 
