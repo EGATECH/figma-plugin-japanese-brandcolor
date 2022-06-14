@@ -35,7 +35,8 @@ const app = new Vue({
   },
   mounted() {
     this.$refs.searchKeyword.focus();
-    axios.get('https://brandcolor.info/api/v1/data.json')
+    const dummyParam = '?' + Math.floor((new Date().getTime()) / 1000 / 60) * 60;
+    axios.get('https://brandcolor.info/api/v1/data.json' + dummyParam)
       .then((response) => {
         this.allBrandcolors = response.data.brandcolors;
         this.allBrandcolors.forEach(brandcolor => {
